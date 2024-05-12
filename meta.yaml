@@ -1,0 +1,44 @@
+{% set name = "celery-batches" %}
+{% set version = "0.8.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/celery-batches-{{ version }}.tar.gz
+  sha256: ba616dfbec419b3c744cfc3bb437a0f9fa288cfc00fe00a8e9f306f3325d7777
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python >=3.8
+    - setuptools >=42.0.0
+    - wheel
+    - pip
+  run:
+    - python >=3.8
+    - celery <5.4,>=5.0
+
+test:
+  imports:
+    - celery_batches
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/clokep/celery-batches
+  summary: Experimental task class that buffers messages and processes them as a list.
+  dev_url: https://github.com/clokep/celery-batches
+  license: BSD-3-Clause
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - gb119
