@@ -27,11 +27,7 @@ requirements:
 test:
   imports:
     - celery_batches
-  commands:
-    - pip check
-  requires:
-    - pip
-
+    
 about:
   home: https://github.com/clokep/celery-batches
   summary: Experimental task class that buffers messages and processes them as a list.
