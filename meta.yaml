@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/celery-batches-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/5b/c0/b89d650c1e29b41b5d117e4b2d35c60155542fed1fae44ea4ecb6171aca0/celery_batches-0.9.tar.gz
   sha256: 4dd63588314d64491aae9384bd54df4fd00b11250ea39c9bdbb79dca6aee9797
 
 build:
