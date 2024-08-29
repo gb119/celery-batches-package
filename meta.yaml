@@ -1,5 +1,5 @@
 {% set name = "celery-batches" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0 %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/celery-batches-{{ version }}.tar.gz
-  sha256: ba616dfbec419b3c744cfc3bb437a0f9fa288cfc00fe00a8e9f306f3325d7777
+  sha256: 4dd63588314d64491aae9384bd54df4fd00b11250ea39c9bdbb79dca6aee9797
 
 build:
   noarch: python
