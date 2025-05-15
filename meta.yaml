@@ -1,13 +1,13 @@
 {% set name = "celery-batches" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/5b/c0/b89d650c1e29b41b5d117e4b2d35c60155542fed1fae44ea4ecb6171aca0/celery_batches-0.9.tar.gz
-  sha256: 4dd63588314d64491aae9384bd54df4fd00b11250ea39c9bdbb79dca6aee9797
+  url: https://files.pythonhosted.org/packages/51/12/30140c5961bd7b9a71d6e20f4ff0c93b6b96fee738c244b8118ca38276ee/celery_batches-0.10.tar.gz
+  sha256: 2e898dab9bf0fed862107069066179278027fe1b87d4c4ee31a3b81713ed7dd3
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - setuptools >=42.0.0
     - wheel
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - celery >=5.3
 
 test:
